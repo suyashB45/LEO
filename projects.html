@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sairam Leo Club</title>
+    <link rel="icon" href="images/leo.png" type="image/png" sizes="64x64">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Sairam Leo Club Logo" class="logo-img" style="width: 100px; height: 100px; border-radius: 50%;">
+                    <img src="images/leo.png" alt="Sairam Leo Club Logo" class="logo-img">
+                    <div class="logo-divider"></div>
+                </div>
+                <div class="brand-text">
+                    <h3>Sairam Leo Club</h3>
+                    <p>Leadership • Excellence • Opportunity</p>
+                </div>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <!-- <a href="events.html" class="nav-link">Events</a> -->
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="images/project.jpg" alt="Sairam Leo Club Projects Background">
+        </div>
+        <div class="container">
+            <h1>Our Projects</h1>
+            <p>Discover our impactful initiatives and ongoing projects</p>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="activity-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="environment">Environment</button>
+                <button class="filter-btn" data-filter="health">Health</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="recent-activities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Projects</h2>
+                <p>Discover our impactful initiatives and ongoing projects</p>
+            </div>
+            <div class="activities-grid">
+                <!-- Project 1 -->
+                <div class="activity-card" data-category="service">
+                    <div class="activity-image">
+                        <img src="Projects_img/Wheel_chair_providence.jpg" alt="Wheel Chair Providence">
+                        <div class="activity-overlay">
+                            <div class="activity-badge community">Service</div>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Wheel Chair Issuance</h3>
+                        <p>Empowering lives through care—wheelchair support extended to Mr. K. Sarangan for improved mobility. A step toward dignity and independence, reflecting Leo Club's dedication to community well-being.</p>
+                        <div class="activity-stats">
+                            <span><i class="fas fa-users"></i> 50+ Beneficiaries</span>
+                            <span><i class="fas fa-calendar"></i> April 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="activity-card" data-category="environment">
+                    <div class="activity-image">
+                        <img src="Index_page_Img/Importance_of_waste.jpg" alt="Green Campus Initiative">
+                        <div class="activity-overlay">
+                            <div class="activity-badge environment">Environment</div>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Green Campus Initiative</h3>
+                        <p>Promoting sustainability through tree plantation, waste management, and eco-friendly campus drives.</p>
+                        <div class="activity-stats">
+                            <span><i class="fas fa-tree"></i> 1000+ Trees Planted</span>
+                            <span><i class="fas fa-calendar"></i> Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="activity-card" data-category="health">
+                    <div class="activity-image">
+                        <img src="Activity_page/Medical_Camp.jpg" alt="Medical Camp">
+                        <div class="activity-overlay">
+                            <div class="activity-badge health">Health</div>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Medical Camp</h3>
+                        <p>Offering free health checkups and medical support to rural communities, promoting healthier lives.</p>
+                        <div class="activity-stats">
+                            <span><i class="fas fa-heartbeat"></i> 500+ Beneficiaries</span>
+                            <span><i class="fas fa-calendar"></i> Feb 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Impact -->
+    <section class="project-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Project Impact</h2>
+                <p>Measuring our success through meaningful metrics</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="impact-number" data-count="500">0</div>
+                    <div class="impact-label">Students Benefited</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="impact-number" data-count="1000">0</div>
+                    <div class="impact-label">Trees Planted</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="impact-number" data-count="2000">0</div>
+                    <div class="impact-label">People Reached</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="impact-number" data-count="100">0</div>
+                    <div class="impact-label">Volunteer Hours</div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Get Involved -->
+    <section class="get-involved">
+        <div class="container">
+            <div class="involved-content">
+                <h2>Want to Support Our Projects?</h2>
+                <p>Join us in making a difference through various ways of involvement</p>
+                <div class="involved-options">
+                    <div class="involved-option">
+                        <i class="fas fa-user-plus"></i>
+                        <h4>Volunteer</h4>
+                        <p>Join our team of dedicated volunteers</p>
+                    </div>
+                    <div class="involved-option">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Donate</h4>
+                        <p>Support our initiatives financially</p>
+                    </div>
+                    <div class="involved-option">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Partner</h4>
+                        <p>Collaborate with us on projects</p>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Get Involved</a>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span>SLC</span>
+                        </div>
+                        <h3>Sairam Leo Club</h3>
+                    </div>
+                    <p>Empowering young leaders through service, fellowship, and personal development.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="team.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Join Our Club</a></li>
+                        <li><a href="contact.html">Volunteer</a></li>
+                        <li><a href="contact.html">Donate</a></li>
+                        <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Sairam Engineering College, Chennai</p>
+                        <p><i class="fas fa-envelope"></i> info@sairamleo.edu</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sairam Leo Club. All rights reserved. | Affiliated with Lions Clubs International</p>
+            </div>
+        </div>
+    </footer> 
+
+    <script src="script.js"></script>
+</body>
+</html> 

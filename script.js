@@ -571,4 +571,10 @@ document.addEventListener('DOMContentLoaded', function() {
     impactNumbers.forEach(number => {
         impactObserver.observe(number);
     });
+
+    document.querySelectorAll('.visionary-leaders .team-member').forEach(card => {
+      card.addEventListener('click', function() {
+        card.classList.toggle('selected');
+      });
+    });
 });

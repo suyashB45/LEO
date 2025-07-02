@@ -9,6 +9,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <div id="notificationBar" class="notification-bar" style="display:none;">
+        <span id="notificationMessage"></span>
+        <button id="notificationClose" class="notification-close" aria-label="Close notification">&times;</button>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -20,7 +24,7 @@
                 </div>
                 <div class="brand-text">
                     <h3>Sairam Leo Club</h3>
-<!--                     <p>Leadership • Excellence • Opportunity</p> -->
+                    <!-- <p>Leadership • Excellence • Opportunity</p> -->
                 </div>
             </div>
             <nav class="nav-menu" id="navMenu">
@@ -41,7 +45,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header fade-in reveal">
         <div class="page-header-bg">
             <img src="images/conntact.jpg" alt="Sairam Leo Club Contact Background">
         </div>
@@ -52,7 +56,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="contact-section reveal">
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Information -->
@@ -61,7 +65,7 @@
                     <p>Reach out to us through any of the following channels. We're here to help!</p>
                     
                     <div class="contact-items">
-                        <div class="contact-item">
+                        <div class="contact-item reveal">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
@@ -72,7 +76,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-item">
+                        <div class="contact-item reveal">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
                             </div>
@@ -83,7 +87,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-item">
+                        <div class="contact-item reveal">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
@@ -95,7 +99,7 @@
                             </div>
                         </div>
 
-                        <div class="contact-item">
+                        <div class="contact-item reveal">
                             <div class="contact-icon">
                                 <i class="fas fa-clock"></i>
                             </div>
@@ -179,7 +183,7 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section reveal">
         <div class="container">
             <h2>Find Us</h2>
             <div class="map-container">
@@ -197,14 +201,14 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section reveal">
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
                 <p>Find answers to common questions about joining and participating in our club</p>
             </div>
             <div class="faq-container">
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <div class="faq-question">
                         <h4>How can I join Sairam Leo Club?</h4>
                         <i class="fas fa-plus"></i>
@@ -214,7 +218,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <div class="faq-question">
                         <h4>What are the membership requirements?</h4>
                         <i class="fas fa-plus"></i>
@@ -224,7 +228,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <div class="faq-question">
                         <h4>How often do you meet?</h4>
                         <i class="fas fa-plus"></i>
@@ -234,7 +238,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <div class="faq-question">
                         <h4>What kind of activities do you organize?</h4>
                         <i class="fas fa-plus"></i>
@@ -244,7 +248,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <div class="faq-question">
                         <h4>Is there a membership fee?</h4>
                         <i class="fas fa-plus"></i>
@@ -254,7 +258,7 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <div class="faq-question">
                         <h4>Can I volunteer without being a member?</h4>
                         <i class="fas fa-plus"></i>
@@ -320,5 +324,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>

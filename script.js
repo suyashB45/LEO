@@ -99,6 +99,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 30)
   }
 
+  // Live Impact Counter: periodically increment stats
+  function getRandomIncrement(max) {
+    return Math.floor(Math.random() * max) + 1;
+  }
+  setInterval(() => {
+    statItems.forEach((item) => {
+      const statNumber = item.querySelector('.stat-number');
+      let current = parseInt(statNumber.textContent.replace('+', ''));
+      const maxCount = parseInt(item.dataset.count);
+      // Only increment if not already way above the original count
+      if (current < maxCount * 2) {
+        const increment = getRandomIncrement(Math.max(1, Math.floor(maxCount * 0.05)));
+        const newTarget = Math.min(current + increment, maxCount * 2);
+        animateCounter(statNumber, newTarget);
+      }
+    });
+  }, 12000); // update every 12 seconds
+
   // Activity Filter with smooth transitions
   const filterBtns = document.querySelectorAll(".filter-btn")
   const activityCards = document.querySelectorAll(".activity-card")
@@ -185,13 +203,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Contact Form with enhanced validation and feedback
   const contactForm = document.getElementById("contactForm")
+  const notificationBar = document.getElementById("notificationBar");
+  const notificationMessage = document.getElementById("notificationMessage");
+  const notificationClose = document.getElementById("notificationClose");
+  function showNotification(message, type = "success") {
+    notificationMessage.textContent = message;
+    notificationBar.className = `notification-bar ${type}`;
+    notificationBar.style.display = "flex";
+    setTimeout(() => {
+      notificationBar.style.display = "none";
+    }, 6000);
+  }
+  if (notificationClose) {
+    notificationClose.onclick = () => {
+      notificationBar.style.display = "none";
+    };
+  }
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault()
-
       const formData = new FormData(this)
       const data = Object.fromEntries(formData)
-
       // Enhanced validation
       const errors = []
       if (!data.firstName?.trim()) errors.push("First name is required")
@@ -199,25 +231,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!data.email?.trim()) errors.push("Email is required")
       if (!data.subject?.trim()) errors.push("Subject is required")
       if (!data.message?.trim()) errors.push("Message is required")
-
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
       if (data.email && !emailRegex.test(data.email)) {
         errors.push("Please enter a valid email address")
       }
-
       if (errors.length > 0) {
-        alert(errors.join("\n"))
+        showNotification(errors.join(". "), "error");
         return
       }
-
       const submitBtn = this.querySelector('button[type="submit"]')
       const originalText = submitBtn.textContent
       submitBtn.textContent = "Sending..."
       submitBtn.disabled = true
-
       // Simulate form submission with loading animation
       setTimeout(() => {
-        alert("Thank you for your message! We will get back to you soon.")
+        showNotification("Thank you for your message! We will get back to you soon.", "success");
         this.reset()
         submitBtn.textContent = originalText
         submitBtn.disabled = false
@@ -397,6 +425,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 600)
     })
   })
+
+  // Scroll-to-top button logic
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Ensure fade-in animation for hero section on load
+  const heroSection = document.querySelector('.hero.fade-in');
+  if (heroSection) {
+    heroSection.classList.add('fade-in');
+  }
 })
 
 // Add CSS for ripple effect
